@@ -8,9 +8,11 @@ import { LocationBarChart } from '@/components/analytics/LocationBarChart';
 import { SalaryScatterPlot } from '@/components/SalaryScatterPlot';
 import { BarChart3, LineChart, PieChart, Sparkles } from 'lucide-react';
 
+import { SalaryRecord } from '@/types';
+
 export default async function AnalyticsPage() {
   const rawSalaries = await prisma.salary.findMany();
-  const allSalaries = rawSalaries.map(s => ({
+  const allSalaries: SalaryRecord[] = rawSalaries.map(s => ({
     ...s,
     created_at: s.created_at.toISOString()
   }));

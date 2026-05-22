@@ -68,7 +68,7 @@ export function CompanyRadarChart({ data, companies }: CompanyRadarChartProps) {
                 return (
                   <div className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md border border-zinc-200 dark:border-zinc-700 p-4 rounded-xl shadow-xl min-w-[180px]">
                     <p className="font-bold text-zinc-900 dark:text-white mb-3 text-lg border-b border-zinc-200 dark:border-zinc-800 pb-2">{label} Compensation</p>
-                    {payload.sort((a,b) => (b.value as number) - (a.value as number)).map((entry, index) => (
+                    {[...payload].sort((a,b) => (b.value as number) - (a.value as number)).map((entry, index) => (
                       <div key={index} className="flex justify-between items-center mb-2 gap-4">
                         <div className="flex items-center gap-2">
                           <div className="w-3 h-3 rounded-full" style={{ backgroundColor: entry.color }} />

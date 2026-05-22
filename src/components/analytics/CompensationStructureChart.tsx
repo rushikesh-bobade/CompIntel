@@ -74,7 +74,7 @@ export function CompensationStructureChart({ data }: CompensationStructureChartP
                       <div key={index} className="flex justify-between items-center mb-2">
                         <div className="flex items-center gap-2">
                           <div className="w-3 h-3 rounded-full" style={{ backgroundColor: entry.color }} />
-                          <span className="text-sm text-zinc-600 dark:text-zinc-400 capitalize">{entry.dataKey}</span>
+                          <span className="text-sm text-zinc-600 dark:text-zinc-400 capitalize">{String(entry.dataKey)}</span>
                         </div>
                         <span className="font-medium text-zinc-900 dark:text-white tabular-data">
                           {formatCurrencyShort(entry.value as number)}
