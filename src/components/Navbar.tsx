@@ -35,6 +35,9 @@ export function Navbar() {
             <Link href="/compare" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
               Compare Offers
             </Link>
+            <Link href="/analytics" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors flex items-center gap-1">
+              Analytics <span className="bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 text-[9px] px-1.5 py-0.5 rounded-full font-bold">NEW</span>
+            </Link>
             <Link href="/negotiate" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors font-semibold text-blue-600 dark:text-blue-400">
               AI Negotiation
             </Link>
