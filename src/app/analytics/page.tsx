@@ -9,7 +9,11 @@ import { SalaryScatterPlot } from '@/components/SalaryScatterPlot';
 import { BarChart3, LineChart, PieChart, Sparkles } from 'lucide-react';
 
 export default async function AnalyticsPage() {
-  const allSalaries = await prisma.salary.findMany();
+  const rawSalaries = await prisma.salary.findMany();
+  const allSalaries = rawSalaries.map(s => ({
+    ...s,
+    created_at: s.created_at.toISOString()
+  }));
 
   const LEVELS = ['L3', 'L4', 'L5', 'L6', 'L7'];
 
